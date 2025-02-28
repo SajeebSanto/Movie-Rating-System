@@ -1,10 +1,11 @@
 let movieData = [
-    { title: "The Shawshank Redemption", genre: "Drama", releaseDate: "1994-09-22", rating: 5 },
-    { title: "The Godfather", genre: "Crime", releaseDate: "1972-03-24", rating: 5 },
-    { title: "The Dark Knight", genre: "Action", releaseDate: "2008-07-18", rating: 4 },
-    { title: "Pulp Fiction", genre: "Crime", releaseDate: "1994-10-14", rating: 4 },
-    { title: "The Lord of the Rings: The Return of the King", genre: "Fantasy", releaseDate: "2003-12-17", rating: 5 }
-];  // Initial movie data
+    ["The Shawshank Redemption", "Drama", "1994-09-22", 5],
+    ["The Godfather", "Crime", "1972-03-24", 5],
+    ["The Dark Knight", "Action", "2008-07-18", 4],
+    ["Pulp Fiction", "Crime", "1994-10-14", 4],
+    ["The Lord of the Rings: The Return of the King", "Fantasy", "2003-12-17", 5]
+];
+  // Initial movie data
 
 
 const renderGrid = () => {

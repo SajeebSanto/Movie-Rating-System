@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List Management</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
-
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -38,7 +35,6 @@
 
     <!-- List of Movies -->
     <div class="list-container" id="listContainer">
-        <input type="text" id="search" class="search-bar" placeholder="Search movies by name..." oninput="searchMovies()">
         <!-- Grid will popuplate the movie list -->
          <div id="grid"></div>
         <button class="btn" onclick="toggleForm()">Create New Movie</button>
@@ -46,4 +42,8 @@
 </div>
 
 </body>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js" defer></script>
+<script src="script.js" defer></script>
+
 </html>
