@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,10 +17,10 @@
         <h2 id="formTitle">Add New Movie</h2>
         <form id="movieForm">
             <label for="title">Movie Title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" maxlength="100">
 
             <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre" required>
+            <input type="text" id="genre" name="genre" maxlength="100" required>
 
             <label for="releaseDate">Release Date:</label>
             <input type="date" id="releaseDate" name="releaseDate" required>
