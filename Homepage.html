@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List Management</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+
 </head>
 <body>
 
@@ -33,22 +37,10 @@
     </div>
 
     <!-- List of Movies -->
-    <div class="list-container active" id="listContainer">
+    <div class="list-container" id="listContainer">
         <input type="text" id="search" class="search-bar" placeholder="Search movies by name..." oninput="searchMovies()">
-        <table id="moviesTable">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Release Date</th>
-                    <th>Rating
-                        <button type="button" onclick="sortMovies('rating')">Sort</button>
-                    </th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="moviesList"></tbody>
-        </table>
+        <!-- Grid will popuplate the movie list -->
+         <div id="grid"></div>
         <button class="btn" onclick="toggleForm()">Create New Movie</button>
     </div>
 </div>
