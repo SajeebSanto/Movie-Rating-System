@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Movie List Management</h1>
+
+    <!-- Add/Edit Form -->
+    <div class="form-container active" id="formContainer">
+        <h2 id="formTitle">Add New Movie</h2>
+        <form id="movieForm">
+            <label for="title">Movie Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+
+            <label for="releaseDate">Release Date:</label>
+            <input type="date" id="releaseDate" name="releaseDate" required>
+
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <button type="button" class="btn" onclick="submitMovie()">Submit</button>
+            <button type="button" class="btn" onclick="toggleForm()">Back to Movie List</button>
+        </form>
+    </div>
+
+    <!-- List of Movies -->
+    <div class="list-container active" id="listContainer">
+        <input type="text" id="search" class="search-bar" placeholder="Search movies by name..." oninput="searchMovies()">
+        <table id="moviesTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                    <th>Rating
+                        <button type="button" onclick="sortMovies('rating')">Sort</button>
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="moviesList"></tbody>
+        </table>
+        <button class="btn" onclick="toggleForm()">Create New Movie</button>
+    </div>
+</div>
+
+</body>
+</html>
